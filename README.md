@@ -18,6 +18,30 @@ The scripts use discord.py library of python. The process is pretty straight for
 	6 Open a text editor and create a new file. This will be the main file for your Discord bot.
 
 	7 Import the Discord.py library and use the Client class to create a new bot client. Use the run() method to start the bot using your bot's token.
+	
+	8 Click the "Copy" button next to the "Client ID" field to copy your bot's client ID to your clipboard. You will need this ID later to invite your bot to a server.
+
+	9 Open a text editor and create a new file. This will be the main file for your Discord bot.
+
+	10 Import the Discord.py library and use the Client class to create a new bot client. Use the run() method to start the bot using your bot's token.
+	
+		import discord
+
+		client = discord.Client()
+
+		@client.event
+		async def on_ready():
+		    print(f'{client.user} has connected to Discord!')
+
+		client.run('YOUR_BOT_TOKEN_HERE')
+
+	
+	11 Save the file and run it using Python.If everything is set up correctly, you should see a message in the console indicating that your bot has connected to Discord.
+
+	12 Invite your bot to a server using the OAuth2 URL generator on the Discord Developer Portal. Select the "bot" scope and copy the generated URL into your web browser to add your bot to a server.
+
+	13 Start creating commands for your bot by using the @client.command() decorator. For example, the following code creates a command called hello that sends a message to the channel when the command is used:
+
 
 
 # Output
